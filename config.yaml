@@ -29,7 +29,7 @@ params:
     - yaml
   highlightjsTheme: github
   highlightjsVersion: 9.12.0
-  subtitle: A Hugo Theme
+  subtitle: Mohd Azmi's Site
 menu:
   main:
     - identifier: home

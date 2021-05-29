@@ -1,0 +1,17 @@
+---
+date: "2021-05-29"
+description: About me and this site
+sidemenu: "true"
+title: About Me
+---
+
+Thank you for coming to my site.
+
+I'm Mohd Azmi, but you can call me Azmi
+
+> Mohd is short form for Muhammad, mainly use in Malaysia.
+
+
+# Academic
+
+
