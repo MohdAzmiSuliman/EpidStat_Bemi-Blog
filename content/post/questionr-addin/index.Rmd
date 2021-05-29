@@ -1,0 +1,20 @@
+---
+title: '{questionr} addin'
+author: Mohd Azmi
+date: []
+slug: []
+categories:
+  - RStudio
+  - R Syntax
+tags:
+  - RStudio
+  - tidyverse
+description: ''
+topics: []
+draft: true
+---
+
+I must admit while I believe type coding make my analysis faster than using GUI, but not all syntax i remember. sometimes common syntax like recode I cant remember.
+
+but i found questionr addin, which help me a lot.
+
