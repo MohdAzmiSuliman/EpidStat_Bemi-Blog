@@ -1,0 +1,73 @@
+---
+title: '"Hello World"'
+author: Mohd Azmi
+date: '2021-05-29'
+slug: []
+categories:
+  - R
+tags:
+  - R
+  - RStudio
+  - tidyverse
+  - ggplot
+description: ''
+topics: []
+---
+
+instead of the common "Hello World" syntax, my first code here will be short R syntax that I'll usually use when I want to show just some simple demo.
+
+of course i'll start with loading tidverse!
+
+```{r}
+library(tidyverse)
+```
+
+let
+
+1. create some random number using normal distribution syntax rnorm
+2. create some random number using uniform distribution syntax runif
+3. create new variable with the summation of both number
+3. create in data table form with tibble and save in azmi_data
+
+```{r}
+azmi_data <- tibble(x = rnorm(50, 5, 2),
+               y = runif(50, 0, 10),
+               z = x+y)
+azmi_data
+```
+
+then let plot it with ggplot
+
+1. x and y plot
+
+```{r}
+ggplot(azmi_data, aes(x,y)) + geom_point()
+```
+
+2. x and z plot
+
+```{r}
+ggplot(azmi_data, aes(x,z)) + geom_point()
+```
+
+then plot linear regression line to x and z plot
+
+```{r}
+ggplot(azmi_data, aes(x,z)) + geom_point() + geom_smooth(method = "lm")
+```
+
+so what are the linear regression parameter for the x and z?
+
+```{r}
+summary(lm(z ~ x, azmi_data))
+```
+
+plot the linear regression using base plot
+
+```{r}
+plot(lm(z ~ x, azmi_data))
+```
+
+
+
+

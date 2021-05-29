@@ -1,0 +1,93 @@
+---
+title: '"Hello World"'
+author: Mohd Azmi
+date: '2021-05-29'
+slug: []
+categories:
+  - R
+tags:
+  - R
+  - RStudio
+  - tidyverse
+  - ggplot
+description: ''
+topics: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>instead of the common “Hello World” syntax, my first code here will be short R syntax that I’ll usually use when I want to show just some simple demo.</p>
+<p>of course i’ll start with loading tidverse!</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.3     v purrr   0.3.4
+## v tibble  3.1.2     v dplyr   1.0.6
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<p>let</p>
+<ol style="list-style-type: decimal">
+<li>create some random number using normal distribution syntax rnorm</li>
+<li>create some random number using uniform distribution syntax runif</li>
+<li>create new variable with the summation of both number</li>
+<li>create in data table form with tibble and save in azmi_data</li>
+</ol>
+<pre class="r"><code>azmi_data &lt;- tibble(x = rnorm(50, 5, 2),
+               y = runif(50, 0, 10),
+               z = x+y)
+azmi_data</code></pre>
+<pre><code>## # A tibble: 50 x 3
+##        x     y     z
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  5.03  7.01 12.0 
+##  2  2.75  4.27  7.02
+##  3  2.81  1.83  4.65
+##  4  3.53  5.67  9.20
+##  5  7.75  1.41  9.16
+##  6  4.61  1.06  5.68
+##  7  5.96  1.32  7.28
+##  8  5.31  5.60 10.9 
+##  9  5.08  2.98  8.06
+## 10  1.16  7.56  8.72
+## # ... with 40 more rows</code></pre>
+<p>then let plot it with ggplot</p>
+<ol style="list-style-type: decimal">
+<li>x and y plot</li>
+</ol>
+<pre class="r"><code>ggplot(azmi_data, aes(x,y)) + geom_point()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>x and z plot</li>
+</ol>
+<pre class="r"><code>ggplot(azmi_data, aes(x,z)) + geom_point()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>then plot linear regression line to x and z plot</p>
+<pre class="r"><code>ggplot(azmi_data, aes(x,z)) + geom_point() + geom_smooth(method = &quot;lm&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>so what are the linear regression parameter for the x and z?</p>
+<pre class="r"><code>summary(lm(z ~ x, azmi_data))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = z ~ x, data = azmi_data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.0197 -2.0815 -0.3023  1.5882  5.8584 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   4.0022     1.0219   3.916 0.000284 ***
+## x             1.0218     0.1878   5.441 1.77e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.732 on 48 degrees of freedom
+## Multiple R-squared:  0.3815, Adjusted R-squared:  0.3686 
+## F-statistic:  29.6 on 1 and 48 DF,  p-value: 1.77e-06</code></pre>
+<p>plot the linear regression using base plot</p>
+<pre class="r"><code>plot(lm(z ~ x, azmi_data))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-2.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-3.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-4.png" width="672" /></p>
