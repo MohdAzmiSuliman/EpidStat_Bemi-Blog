@@ -7,11 +7,23 @@ title: About Me
 
 Thank you for coming to my site.
 
-I'm Mohd Azmi, but you can call me Azmi
+I'm Mohd Azmi, but you can call me Azmi. *(Mohd is short form for Muhammad, mainly use in Malaysia.)*
 
-> Mohd is short form for Muhammad, mainly use in Malaysia.
+This is me.
 
+![Me](/./about_files/gambar newton azmi formal (2).JPG){width=400px}
 
 # Academic
 
+1.  MBBS, IIUM (2013)
+2.  MPH, USM (2019)
+3.  *DrPH, USM* (ongoing, estimate to graduate in 2022)
 
+# Statistical Software
+
+1. SPSS
+2. R & RStudio *(tidyverse user here)*
+
+# Why this site?
+
+Initially, this site is for me to compile R syntax that I commonly use. But I might rant sometimes.
