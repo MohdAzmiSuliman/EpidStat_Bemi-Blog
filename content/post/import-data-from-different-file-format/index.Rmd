@@ -1,0 +1,14 @@
+---
+title: Import data from different file format
+author: Mohd Azmi
+date: []
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+draft: true
+
+---
+
+import using rio[https://rdrr.io/cran/rio/f/README.md] package
