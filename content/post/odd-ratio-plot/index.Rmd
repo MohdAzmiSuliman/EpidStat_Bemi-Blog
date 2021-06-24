@@ -1,0 +1,17 @@
+---
+title: odd ratio plot
+author: Mohd Azmi
+date: []
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+draft: TRUE
+
+---
+
+
+plot for odd ratio
+
+or use oddsplotly package
