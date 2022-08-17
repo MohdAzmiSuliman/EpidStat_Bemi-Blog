@@ -1,0 +1,22 @@
+---
+title: R and RStudio Installation
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+Install R and RStudio 
+
+Windows 10
+
+Linux
+
+Ubuntu
+
+Debian
+
+sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev
