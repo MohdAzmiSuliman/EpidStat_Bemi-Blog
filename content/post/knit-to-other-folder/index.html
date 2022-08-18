@@ -1,0 +1,30 @@
+---
+title: Knit to other folder
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+
+
+<p>Usually in single project, we will have less than 10 files.</p>
+<p>so every file located in the same folder should not be problem.</p>
+<p>but what if we have lots of files, and we want to have several subfolders?</p>
+<p>saving plots to subfolder:</p>
+<p>knit rmd file into subfolder:</p>
+<pre class="yaml"><code>---
+title: &quot;title&quot;
+author: &quot;gordon freeman&quot;
+date: &quot;2022-08-18&quot;
+
+knit: (function(inputFile, encoding) {
+      out_dir &lt;- &quot;reports&quot;;
+      rmarkdown::render(inputFile,
+                        encoding=encoding,
+                        output_dir=file.path(dirname(inputFile), out_dir))})
+---</code></pre>
+<p>source: <a href="https://stackoverflow.com/questions/28894515/rmarkdown-directing-output-file-into-a-directory" class="uri">https://stackoverflow.com/questions/28894515/rmarkdown-directing-output-file-into-a-directory</a></p>
