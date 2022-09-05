@@ -1,0 +1,16 @@
+---
+title: Writing Research Articles with Rmarkdown
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+might need several post
+
+basic tutorial: https://resulumit.com/teaching/rmd_workshop.html
+"attaching" tex template to rmd: https://ulriklyngs.com/post/2021/12/02/how-to-adapt-any-latex-template-for-use-with-r-markdown-in-four-steps/
+
