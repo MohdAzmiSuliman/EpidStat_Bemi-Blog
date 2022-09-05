@@ -1,0 +1,22 @@
+---
+title: Collaboration or Group Name for bibtex
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+common format in academic world is "First Name" and "Last Name". bibtex also follow this format.
+
+if you want to have complete "Full Name" like "John Doe", or collaboration name like "Global Hypertension Group" in your citation (or reference), adjust your bibtex entry with double "{" symbol
+
+eg
+
+@article{Aad2011150,
+title = "TITLE",
+author= {{Global Hypertension Group}},
+...
+}
