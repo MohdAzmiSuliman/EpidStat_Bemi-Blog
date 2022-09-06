@@ -11,7 +11,32 @@ topics: []
 
 might need several post
 
-simple tutorial: http://landscapeportal.org/blog/2017/09/06/r-markdown-template-for-a-scientific-manuscript/
-extensive tutorial: https://resulumit.com/teaching/rmd_workshop.html
-bookdown version: https://bookdown.org/pdr_higgins/rmrwr/
+simple tutorial: 
+http://landscapeportal.org/blog/2017/09/06/r-markdown-template-for-a-scientific-manuscript/ 
+https://jhemberger.github.io/posts/posts/r-markdown-manuscripts/  
+  
+extensive tutorial: https://resulumit.com/teaching/rmd_workshop.html  
+  
+bookdown version: 
+https://bookdown.org/pdr_higgins/rmrwr/ 
+https://bookdown.org/thea_knowles/dissertating_rmd_presentation/   
+  
 "attaching" tex template to rmd: https://ulriklyngs.com/post/2021/12/02/how-to-adapt-any-latex-template-for-use-with-r-markdown-in-four-steps/
+  
+  
+other
+https://rosannavanhespen.nl/rmarkdown/writing-your-thesis-with-r-markdown-1-getting-started/
+https://datascienceplus.com/r-for-publication-by-page-piccinini-lesson-0-introduction-and-set-up/
+https://www.one-tab.com/page/d00HO6mxTTuqo2o7aGCffQ
+  
+  
+Prerequisite:
+- R 
+- RStudio 
+- RMarkdown 
+  
+Part 1: Getting started with RMarkdown 
+  
+Part 2: Citation 
+- zotero 
+- bbt better bibtex 
