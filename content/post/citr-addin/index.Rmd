@@ -1,0 +1,18 @@
+---
+title: citr addin
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+add in use for citation
+
+simplest way to add citation in rstudio is to use visual mode and choose insert (hotkey Ctrl+Shift+F8), however i try to avoid using visual mode - it seem buggy, and slow. 
+
+but if you like me, who prefer source mode, you might want to try citr addin.
+
+unfortunately, citr addin was not available in cran, and have to install directly from github (using devtoolss::intall_github() function)

@@ -13,4 +13,5 @@ might need several post
 
 simple tutorial: http://landscapeportal.org/blog/2017/09/06/r-markdown-template-for-a-scientific-manuscript/
 extensive tutorial: https://resulumit.com/teaching/rmd_workshop.html
+bookdown version: https://bookdown.org/pdr_higgins/rmrwr/
 "attaching" tex template to rmd: https://ulriklyngs.com/post/2021/12/02/how-to-adapt-any-latex-template-for-use-with-r-markdown-in-four-steps/
