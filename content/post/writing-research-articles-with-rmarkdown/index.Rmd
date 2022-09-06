@@ -11,6 +11,10 @@ topics: []
 
 might need several post
 
+different?: 
+https://stirlingcodingclub.github.io/Manuscripts_in_Rmarkdown/Rmarkdown_notes.html  
+  
+  
 simple tutorial: 
 http://landscapeportal.org/blog/2017/09/06/r-markdown-template-for-a-scientific-manuscript/ 
 https://jhemberger.github.io/posts/posts/r-markdown-manuscripts/  
