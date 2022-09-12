@@ -1,0 +1,12 @@
+---
+title: idea
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+refer https://quantifyinghealth.com/ for some idea
