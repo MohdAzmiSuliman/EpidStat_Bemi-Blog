@@ -1,0 +1,19 @@
+---
+title: Creating MS Word template for rmarkdown
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+writing report with RStudio made easier with rmarkdown. I prefer html output, however I still need to write reports in MS Word. 
+
+however, the default formatting when knitting rmd file into docx was hideous. either that, or i just used to write report in ms word and worry about the formatting later. 
+
+so i was reading about officedown package, and when i want to develop my own template, I end up to this page https://rmarkdown.rstudio.com/articles_docx.html . 
+
+the page is quite old, so i decided to try reproduce it, and see if any of the instruction still relevant, or there are some of the instruction need to be updated.
+
