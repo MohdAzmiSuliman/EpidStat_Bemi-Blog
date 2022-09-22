@@ -1,5 +1,5 @@
 ---
-title: odd ratio plot
+title: Forest Plot with Log Transformation (e.g. Odd Ratio & Binomial Logistic Regression)
 author: Mohd Azmi
 date: []
 slug: []
@@ -12,7 +12,45 @@ draft: TRUE
 ---
 
 
-plot for odd ratio
+Forest plot is very good visualization aid to show logistic regression effect, i.e. the odd ratio and the 95% CI. 
+
+however, logistic regression value is in logarithm scale, ranging from infinitesimal number to very large number. thus when doing forest small, the range can be misleading, unless the axis is transformmed too.
+
+for example, a factor with OR (95% CI) of 1 (0.33, 3.00). as you can see here, the "distance" from lower limit to the estimation, and the "distance" from the estimation to upper limit, is actually same 
+
+example
+
+imagine a group of people with equal number of male and female, both had equal number of taking breakfast and not taking breakfast
+
+```{r}
+gen1ds <- data.frame(gender = rep(c("Male", "Female"), each = 2, times = 25),
+                 resp = as_factor(rep(c("No", "Yes"), 50)))
+with(gen1ds, table(gender, resp))
+
+gen2ds <- data.frame(gender = rep(c("Male", "Female"), each = 2, times = 100),
+                 resp = as_factor(rep(c("No", "Yes"), 200)))
+with(gen2ds, table(gender, resp))
+
+gen3ds <- data.frame(gender = rep(c("Male", "Female"), each = 2, times = 250),
+                 resp = as_factor(rep(c("No", "Yes"), 500)))
+with(gen3ds, table(gender, resp))
+```
+
+in this example, you can see while the number is different, the proportion of gender, and the response, and the response for each category is same - hence when you do logistic regression, you will get same beta coefficition (and thus same OR), with different CI.
+
+```{r}
+glm(resp ~ gender, family = "binomial", data = gen1ds) %>%
+  broom::tidy(conf.int = T, exponentiate = T)
+
+glm(resp ~ gender, family = "binomial", data = gen2ds) %>%
+  broom::tidy(conf.int = T, exponentiate = T)
+
+glm(resp ~ gender, family = "binomial", data = gen3ds) %>%
+  broom::tidy(conf.int = T, exponentiate = T)
+```
+
+so lets make forest plot (with single factor)
+
 
 reference: http://www.sthda.com/english/wiki/ggplot2-axis-scales-and-transformations
 
