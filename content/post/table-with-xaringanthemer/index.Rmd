@@ -1,0 +1,21 @@
+---
+title: Table with xaringanthemer
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+xaringanthemer package really help people who doesn't have knowledge on css.
+
+unfortunately, xaringanthemer by default create table with alternate colour for row.
+
+but if you want to make the table not to have alternate background colour for row, 
+
+```{r, eval=FALSE}
+style_mono_dark(table_row_even_background_color = apply_alpha("#cbf7ed", opacity = 0))
+```
+
