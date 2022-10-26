@@ -22,3 +22,5 @@ Debian
 sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev
 
 libmagick++-dev
+
+cmake
