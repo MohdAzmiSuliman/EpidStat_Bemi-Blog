@@ -1,0 +1,87 @@
+---
+title: Column Name - Rename and Label
+author: Mohd Azmi
+date: ''
+slug: []
+categories: []
+tags: []
+description: ''
+topics: []
+---
+
+## Rename column using tidyverse (or tibble and dplyr package)
+
+step by step
+
+
+```{r}
+#| eval: false
+
+var_rename_setup <- tibble::tibble(New_Name = c("Var1", "Var2", "Var3"),
+                                   Ori_Name = c("Var 1", "Var 2", "Var 3"))
+
+var_rename_list <- tibble::deframe(var_rename_setup)
+
+# the list must consist of new name followed by original name
+
+dataset %>% dplyr::rename(!!!var_rename_list)
+```
+
+single step
+
+
+```{r}
+#| eval: false
+
+dataset %>%
+  rename(!!!deframe(select(var_rename_setup, New_Name, Ori_Name)))
+
+```
+
+## Label column using labelled package
+
+step by step
+
+```{r}
+#| eval: false
+
+var_label_setup <- tibble::tibble(New_Name = c("Var1", "Var2", "Var3"),
+                                  New_Label = c("Variable 1", "Variable 2", "Variable 3"))
+
+var_label_list <- setNames(as.list(var_label_setup$New_Label), var_label_setup$New_Name)
+
+dataset %>% labelled::set_variable_labels(.labels = var_label_list, .strict = FALSE)
+
+# .strict = FALSE option is ignore if some labels doesn't correspond to a column of x
+```
+
+single step
+
+```{r}
+#| eval: false
+
+dataset %>%
+  set_variable_labels(.labels = setNames(as.list(var_label_setup$New_Label), # label variable name
+                                         var_label_setup$New_Name),
+                      .strict = FALSE) 
+```
+
+
+## Combine Rename and Label
+
+if you have dataframe of the name and label, can also combine them
+
+```{r}
+#| eval: false
+
+var_namelabel_setup <- tibble::tibble(Ori_Name = c("Var 1", "Var 2", "Var 3"),
+                                      New_Name = c("Var1", "Var2", "Var3"),
+                                      New_Label = c("Variable 1", "Variable 2", "Variable 3"))
+
+dataset %>%
+  rename(!!!deframe(select(var_namelabel_setup, New_Name, Ori_Label))) %>% # rename variable name
+  set_variable_labels(.labels = setNames(as.list(var_namelabel_setup$New_Label), # label variable name
+                                         var_namelabel_setup$New_Name),
+                      .strict = FALSE)
+```
+
