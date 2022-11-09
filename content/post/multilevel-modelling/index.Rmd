@@ -19,12 +19,12 @@ notes
 
 Summary Table
 
+- 
 - https://strengejacke.github.io/sjPlot/articles/tab_mixed.html
 - https://cran.r-project.org/web/packages/jtools/vignettes/summ.html
-- https://strengejacke.github.io/ggeffects/articles/introduction_randomeffects.html
 
 Plotting
 
 - https://strengejacke.github.io/sjPlot/articles/plot_marginal_effects.html
-- https://cran.r-project.org/web/packages/jtools/vignettes/effect_plot.html
 - https://strengejacke.github.io/ggeffects/articles/introduction_randomeffects.html
+- https://cran.r-project.org/web/packages/jtools/vignettes/effect_plot.html
