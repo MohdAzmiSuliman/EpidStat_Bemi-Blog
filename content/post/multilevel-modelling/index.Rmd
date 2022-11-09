@@ -13,6 +13,10 @@ Understanding multilevel
 
 - nice visualization: http://mfviz.com/hierarchical-models/
 
+notes
+
+- https://psyteachr.github.io/stat-models-v1/introducing-linear-mixed-effects-models.html
+
 Summary Table
 
 - https://strengejacke.github.io/sjPlot/articles/tab_mixed.html
